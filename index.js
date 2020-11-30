@@ -55,7 +55,7 @@ app.get("/", async (req, res) => {
       total: expenses.reduce((accum, expense) => accum + expense.value, 0),
       count: expenses.length,
     });
-  } catch(err) {
+  } catch (err) {
     next(err);
   }
 });
@@ -76,9 +76,9 @@ app.get("/expenses", requiresAuth(), async (req, res, next) => {
     const expenses = await axios.get(`${API_URL}/reports`);
     res.render("expenses", {
       user: req.oidc && req.oidc.user,
-      expenses,
+      expenses: expenses.data,
     });
-  } catch(err) {
+  } catch (err) {
     next(err);
   }
 });
