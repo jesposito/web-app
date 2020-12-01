@@ -15,7 +15,7 @@ block content
     table(border='1' class='tablesaw tablesaw-stack' data-tablesaw-mode='stack')
       th
         each key in Object.keys(expenses[0])
-          th
+          tr
             strong=key
       each expense in expenses
         tr
