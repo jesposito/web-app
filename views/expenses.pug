@@ -13,9 +13,9 @@ block content
       |.
       | These are your expenses:
     table(border='1' class='tablesaw tablesaw-stack' data-tablesaw-mode='stack')
-      tr
+      th
         each key in Object.keys(expenses[0])
-          th
+          tr
             strong=key
       each expense in expenses
         tr
