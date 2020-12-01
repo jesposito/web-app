@@ -12,8 +12,8 @@ block content
         | Anonymous
       |.
       | These are your expenses:
-    table(border='1 solid black' class='tablesaw tablesaw-stack' data-tablesaw-mode='stack')
-      thead(bgcolor='#ececec')
+    table(border='1px solid black' class='tablesaw tablesaw-stack' data-tablesaw-mode='stack')
+      thead(bgcolor='#ececec' border='1px solid black')
           each key in Object.keys(expenses[0])
             th
               strong=key
