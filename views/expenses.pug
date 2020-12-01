@@ -13,7 +13,7 @@ block content
       |.
       | These are your expenses:
     table(border='1' class='tablesaw tablesaw-stack' data-tablesaw-mode='stack')
-      thead
+      thead(bgcolor='#ececec')
           each key in Object.keys(expenses[0])
             th
               strong=key
